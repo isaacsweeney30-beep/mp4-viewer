@@ -1,0 +1,40 @@
+# MP4 & YouTube Viewer
+
+A lightweight browser app that lets you play:
+
+- YouTube links
+- Direct MP4 URLs
+- Local MP4 files from your device
+
+## Run it locally
+
+From the project folder, start a simple static web server:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+## Features
+
+- Paste a YouTube watch/share URL and it will embed the video inline
+- Paste a direct MP4 URL and it will play in the browser
+- Upload a local MP4 file for offline playback
+- Playback controls included via the HTML5 video player
+
+## Files
+
+- `index.html` – app structure
+- `style.css` – styling
+- `script.js` – logic for YouTube vs MP4 handling
+
+## Notes
+
+Some remote MP4 sources may block browser playback depending on CORS or server restrictions. YouTube embeds are supported as long as the link is valid.
+
+

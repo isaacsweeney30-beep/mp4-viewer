@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MP4 & YouTube Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Video player</p>
+          <h1>MP4 & YouTube Viewer</h1>
+        </div>
+      </header>
+
+      <section class="controls-panel">
+        <form id="source-form" class="source-form">
+          <label class="sr-only" for="video-url">Video URL</label>
+          <input
+            id="video-url"
+            type="url"
+            placeholder="Paste a YouTube link or direct MP4 URL"
+            autocomplete="off"
+          />
+          <button type="submit">Load video</button>
+        </form>
+
+        <div class="toolbar-row">
+          <label class="file-picker">
+            <input id="video-file" type="file" accept="video/*,.mp4" />
+            <span>Choose MP4 file</span>
+          </label>
+
+          <button id="clear-button" class="secondary" type="button">Clear</button>
+        </div>
+
+        <p id="status" class="status" aria-live="polite">Ready to load a video.</p>
+      </section>
+
+      <section class="player-panel">
+        <video
+          id="video-player"
+          controls
+          playsinline
+          preload="metadata"
+          crossorigin="anonymous"
+          hidden
+        ></video>
+
+        <iframe
+          id="youtube-player"
+          title="YouTube video player"
+          src=""
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          hidden
+        ></iframe>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
